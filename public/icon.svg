@@ -1,0 +1,21 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#4c1d95"/>
+    </linearGradient>
+    <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <!-- left bracket "<" -->
+  <path d="M198 156 L110 256 L198 356" fill="none" stroke="url(#stroke)" stroke-width="30"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- right bracket ">" forms the second stroke of the X together with a slash -->
+  <path d="M314 156 L402 256 L314 356" fill="none" stroke="url(#stroke)" stroke-width="30"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- diagonal slash completing the X silhouette -->
+  <path d="M225 366 L287 146" fill="none" stroke="#f8fafc" stroke-width="26" stroke-linecap="round"/>
+</svg>

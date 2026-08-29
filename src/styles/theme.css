@@ -1,0 +1,124 @@
+:root,
+[data-theme="codex-dark"] {
+  --cx-bg-0: #1e1e1e;
+  --cx-bg-1: #252526;
+  --cx-bg-2: #2d2d30;
+  --cx-bg-3: #333336;
+  --cx-border: #3c3c3c;
+  --cx-fg: #cccccc;
+  --cx-fg-muted: #8a8a8a;
+  --cx-accent: #22d3ee;
+  --cx-accent-2: #a855f7;
+  --cx-danger: #f87171;
+  --cx-warning: #fbbf24;
+  --cx-success: #4ade80;
+  --cx-selection: #264f78;
+  --cx-titlebar: #323233;
+}
+
+[data-theme="codex-light"] {
+  --cx-bg-0: #ffffff;
+  --cx-bg-1: #f3f3f3;
+  --cx-bg-2: #eaeaea;
+  --cx-bg-3: #e0e0e0;
+  --cx-border: #d4d4d4;
+  --cx-fg: #1e1e1e;
+  --cx-fg-muted: #6b6b6b;
+  --cx-accent: #0891b2;
+  --cx-accent-2: #7c3aed;
+  --cx-danger: #dc2626;
+  --cx-warning: #d97706;
+  --cx-success: #16a34a;
+  --cx-selection: #add6ff;
+  --cx-titlebar: #dddddd;
+}
+
+[data-theme="codex-midnight"] {
+  --cx-bg-0: #0b0f19;
+  --cx-bg-1: #101526;
+  --cx-bg-2: #161b2e;
+  --cx-bg-3: #1c2238;
+  --cx-border: #262c44;
+  --cx-fg: #dbe4ff;
+  --cx-fg-muted: #7d89b0;
+  --cx-accent: #38bdf8;
+  --cx-accent-2: #c084fc;
+  --cx-danger: #fb7185;
+  --cx-warning: #facc15;
+  --cx-success: #34d399;
+  --cx-selection: #1e3a5f;
+  --cx-titlebar: #0f1424;
+}
+
+[data-theme="codex-hc"] {
+  --cx-bg-0: #000000;
+  --cx-bg-1: #000000;
+  --cx-bg-2: #0a0a0a;
+  --cx-bg-3: #141414;
+  --cx-border: #ffffff;
+  --cx-fg: #ffffff;
+  --cx-fg-muted: #d0d0d0;
+  --cx-accent: #ffff00;
+  --cx-accent-2: #00ffff;
+  --cx-danger: #ff3b3b;
+  --cx-warning: #ffd400;
+  --cx-success: #00ff6a;
+  --cx-selection: #ffff00;
+  --cx-titlebar: #000000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  background: var(--cx-bg-0);
+  color: var(--cx-fg);
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 13px;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* ---------- Responsive breakpoints ---------- */
+/* Desktop layout is the default (>= 900px). Below that we switch to the
+   mobile shell (bottom nav + stacked editor/terminal). Tablet gets a hybrid
+   layout: activity bar + explorer collapse into an overlay drawer. */
+
+.cx-desktop-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cx-mobile-shell {
+  display: none;
+  flex-direction: column;
+  height: 100%;
+}
+
+@media (max-width: 899px) {
+  .cx-desktop-shell {
+    display: none;
+  }
+  .cx-mobile-shell {
+    display: flex;
+  }
+}
+
+@media (min-width: 900px) {
+  .cx-mobile-shell {
+    display: none;
+  }
+}
