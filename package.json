@@ -3,7 +3,9 @@
   "productName": "Code X",
   "version": "0.1.0",
   "description": "Code X - Modern multi-platform code editor",
-  "author": "Code X Team",
+  "author": {
+  "name": "Code X Team",
+  "email": "support@code.x"},
   "main": "dist-electron/main.js",
   "type": "module",
   "scripts": {
